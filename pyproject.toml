@@ -15,7 +15,8 @@ dependencies = [
     # Vector Database & Search
     "chromadb>=1.4.0",
     "faiss-cpu>=1.13.0",
-    
+     "onnxruntime>=1.18.0,<1.23.0",
+
     # Document Processing
     "pymupdf>=1.26.0",
     "pandas>=2.3.0",
