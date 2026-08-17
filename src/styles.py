@@ -56,8 +56,8 @@ def get_css(lang: str = "en") -> str:
     --brass-ring:  rgba(59, 130, 246, 0.45);
 
     --text-primary:   #E2E8F0;
-    --text-secondary: #94A3B8;
-    --text-muted:     #64748B;
+    --text-secondary: #A6B2C4;
+    --text-muted:     #808C9E;
 
     --success: #22C55E;
     --warning: #F59E0B;
@@ -163,12 +163,16 @@ div[data-testid="stHorizontalBlock"] div.stButton > button:hover {{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 135%;
-    height: 135%;
+    width: 130%;
+    height: 130%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,162,39,0.16) 0%, rgba(201,162,39,0.06) 45%, transparent 72%);
-    filter: blur(14px);
+    background: radial-gradient(circle,
+        rgba(96, 165, 250, 0.10) 0%,
+        rgba(124, 140, 248, 0.055) 44%,
+        rgba(167, 139, 250, 0.025) 64%,
+        transparent 78%);
+    filter: blur(32px);
     z-index: -1;
     pointer-events: none;
 }}
@@ -181,10 +185,7 @@ div[data-testid="stHorizontalBlock"] div.stButton > button:hover {{
 }}
 
 div[data-testid="stFileUploader"] label {{
-    text-align: center !important;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    display: none !important;
 }}
 section[data-testid="stFileUploaderDropzone"],
 div[data-testid="stFileUploaderDropzone"] {{
@@ -228,12 +229,11 @@ div[data-testid="stElementContainer"]:has(> .upload-cta-label) {{
     margin-bottom: -0.25rem !important;
 }}
 .upload-cta-label {{
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--text-muted);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    color: var(--text-secondary);
     transition: var(--transition);
 }}
 div[data-testid="stElementContainer"]:has(> .upload-cta-label):hover ~ div[data-testid="stElementContainer"] section[data-testid="stFileUploaderDropzone"],
@@ -294,6 +294,17 @@ div[data-testid="stFileUploaderFile"] button::after {{
 }}
 div[data-testid="stFileUploaderFile"] ~ button {{
     display: none !important;
+}}
+
+/* ═══ عند وجود ملف مرفوع: يبقى فقط زر الحذف × ═══
+   نُخفي كل الأزرار داخل عنصر الرفع (بما فيها زر "Add Files/إضافة ملفات"
+   أينما كان في الـ DOM)، ثم نُعيد إظهار زر حذف الملف × فقط بأولوية أعلى.
+   (إضافة ملف آخر تبقى ممكنة بالسحب والإفلات على المنطقة) */
+div[data-testid="stFileUploader"]:has([data-testid="stFileUploaderFile"]) button {{
+    display: none !important;
+}}
+div[data-testid="stFileUploader"]:has([data-testid="stFileUploaderFile"]) [data-testid="stFileUploaderFile"] button {{
+    display: inline-flex !important;
 }}
 
 /* ═══════════════════════════════════════════════════════════
@@ -506,29 +517,51 @@ hr {{
     padding: 1rem;
     direction: {direction};
 }}
-.welcome-logo {{ width: 180px; height: 180px; border-radius: 50%; margin-bottom: 0.3rem; position: relative; z-index: 1; }}
+.welcome-logo {{ width: 180px; height: 180px; border-radius: 50%; margin-bottom: 0.3rem; position: relative; z-index: 1; filter: drop-shadow(0 5px 14px rgba(96, 165, 250, 0.08)); }}
 
 .welcome-title {{
     font-family: var(--font-heading);
-    font-size: 3.1rem;
-    font-weight: 600;
-    font-style: {"normal" if lang == "ar" else "italic"};
-    letter-spacing: -0.01em;
-    color: var(--text-primary);
+    font-size: 3.2rem;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: -0.015em;
+    background: linear-gradient(
+        100deg,
+        #FFFFFF 0%,
+        #C7D2FE 16%,
+        #6D8BF0 34%,
+        #2E4C9E 50%,
+        #7C5CE0 66%,
+        #C4B5FD 84%,
+        #FFFFFF 100%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: titleFlow 7s linear infinite;
     margin-bottom: 0.3rem;
 }}
+@keyframes titleFlow {{
+    0%   {{ background-position: 0% 50%; }}
+    100% {{ background-position: 220% 50%; }}
+}}
+@media (prefers-reduced-motion: reduce) {{
+    .welcome-title {{ animation: none; }}
+}}
 .welcome-subtitle {{
-    font-family: var(--font-mono);
-    font-size: 0.95rem;
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--brass);
+    font-style: italic;
+    letter-spacing: 0.01em;
+    color: var(--brass-light) !important;
     margin-bottom: 1.4rem;
 }}
 .welcome-desc {{
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: #79828F !important;
     max-width: 540px;
     line-height: 1.65;
     margin-bottom: 1.6rem;
@@ -679,10 +712,10 @@ div[data-testid="stElementContainer"]:has(.menu-bar-anchor) + div[data-testid="s
     text-align: {text_align};
 }}
 .footer-title {{
-    color: var(--text-primary);
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 600;
+    color: var(--text-primary);
 }}
 .footer-summary {{
     color: var(--text-secondary);

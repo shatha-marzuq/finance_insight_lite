@@ -54,7 +54,7 @@ state = AppState()
 class QueryRequest(BaseModel):
     question: str = Field(..., description="The question to ask")
     use_self_rag: bool = Field(default=True, description="Enable Self-RAG verification")
-    max_retries: int = Field(default=2, description="Max retries for Self-RAG")
+    max_retries: int = Field(default=1, ge=0, le=3, description="Max retries for Self-RAG")
 
 
 class QueryResponse(BaseModel):
@@ -185,7 +185,11 @@ async def query_document(request: QueryRequest):
         start_time = time.time()
         
         # Process query
-        result = state.agent.process_query(query=request.question)
+        result = state.agent.process_query(
+            query=request.question,
+            use_self_rag=request.use_self_rag,
+            max_retries=request.max_retries,
+        )
         
         processing_time = (time.time() - start_time) * 1000  # Convert to ms
         

@@ -11,7 +11,7 @@ from .structured_tables import is_tabular_row_document, small_table_documents
 
 CHUNK_SIZE = 1500
 CHUNK_OVERLAP = 100
-CHUNKING_VERSION = 2
+CHUNKING_VERSION = 3
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 EMBEDDING_DEVICE = "cpu"
 

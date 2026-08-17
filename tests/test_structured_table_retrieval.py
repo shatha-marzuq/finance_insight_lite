@@ -8,7 +8,7 @@ from langchain_core.documents import Document
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from finance_insight_lite.modules.processor import csv_to_documents_optimized
+from finance_insight_lite.modules.processor import csv_to_documents_optimized, load_documents_fastest
 from finance_insight_lite.modules.rag_agent import CRAGRetriever, SelfRefiningAnswerEngine
 from finance_insight_lite.modules.structured_tables import (
     is_small_table,
@@ -72,6 +72,18 @@ class StructuredTableRetrievalTests(unittest.TestCase):
         self.assertTrue(all(doc.metadata["table_row"] for doc in documents))
         self.assertIn("entry_id: E-101", documents[0].page_content)
 
+    def test_fast_loader_adds_source_file_metadata(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            csv_path = Path(tmpdir) / "ledger.csv"
+            pd.DataFrame({
+                "entry_id": ["E-101"],
+                "amount_sar": [1000],
+            }).to_csv(csv_path, index=False)
+
+            result = load_documents_fastest(str(csv_path), use_cache=False)
+
+        self.assertEqual(result["documents"][0].metadata["source_file"], "ledger.csv")
+
     def test_tabular_rows_are_not_resplit_or_overlapped_in_vector_chunks(self):
         with tempfile.TemporaryDirectory() as tmpdir:
             csv_path = Path(tmpdir) / "ledger.csv"
@@ -100,6 +112,7 @@ class StructuredTableRetrievalTests(unittest.TestCase):
             document = render_full_table_document(str(xlsx_path))
 
         self.assertTrue(document.metadata["table_full_context"])
+        self.assertEqual(document.metadata["source_file"], "pipeline.xlsx")
         self.assertIn("DEAL-201", document.page_content)
         self.assertIn("DEAL-202", document.page_content)
 

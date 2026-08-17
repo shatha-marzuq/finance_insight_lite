@@ -1,17 +1,14 @@
 [
   {
-    "question": "غالباً ما نعاني في البرامج التدريبية من ضعف حضور الموظفين وهدر الميزانيات المخصصة لها. ما هي نسبة الالتزام الفعلي في هذا البرنامج؟",
-    "generated_answer": "لا توجد في السياق أي رقم يوضح نسبة الالتزام الفعلي في البرنامج.",
-    "source_chunks": [
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: استخدامي الفعلي لمواطن قوّتي | المعدّل قبل الورشة\n(1-4): 1.75 | المعدّل بعد الورشة\n(1-4): 3.14 | الفرق: 1.39 | نسبة التحسّن: +80% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن كبير في التطبيق",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: القناعة بأهمية البرنامج لتطوير الفريق | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: قيمة منظمية واضحة",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: الرضا العام عن البرنامج | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: المشاركون رضوا عن القيمة المقدّمة",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: الاستفادة والمتعة خلال البرنامج | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: تجربة تعليمية إيجابية ومؤثّرة",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: بداية استشعاري لمواهبي الشخصيّة | المعدّل قبل الورشة\n(1-4): 2.12 | المعدّل بعد الورشة\n(1-4): 3.29 | الفرق: 1.17 | نسبة التحسّن: +55% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن ملحوظ"
+    "question": "لدينا تخوف دائم من تسرب الكفاءات (Employee Turnover) بعد الاستثمار في تطويرهم. هل هناك ما يضمن أن هذا الاستثمار عزز ولاء الموظفين ورضاهم عن المنظمة؟",
+    "generated_answer": "لا توجد معلومات في السياق المقدم تدعم أو تضمن أن الاستثمار في تطوير الموظفين قد عزز ولاء الموظفين أو رضاهم عن المنظمة.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
     ],
-    "token_precision": 0.36,
-    "token_recall": 0.05,
-    "token_f1": 0.08,
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
     "judge_status": "ok",
     "groundedness": 5,
     "numerical_accuracy": 5,
@@ -19,96 +16,505 @@
     "clarity": 5,
     "overall": 5.0,
     "unsupported_claims": [],
-    "rationale": "The answer accurately reflects the absence of any compliance figure in the retrieved chunks, making it fully grounded, relevant, and clear."
+    "rationale": "The answer accurately reflects that the provided source chunks contain only file names with no evidence of employee loyalty or satisfaction, so it is fully grounded, relevant, and clear."
   },
   {
-    "question": "\"تقييم الكوتش مرتفع جداً ويصل إلى 5/5 في بعض البنود. هل القيمة المقدمة تستحق استمرار التعاقد مع هذا الكوتش/الجهة مستقبلاً؟",
-    "generated_answer": "**الحقائق**  \n- متوسط الاستفادة والمتعة خلال البرنامج هو 3.57 من 4، مع تقييم نوعي \"مرتفع جداً\" و100 % من المشاركين حصلوا على درجة 3 أو 4.  \n- معيار سهولة التواصل مع الكوتش يساوي 4 من 4، ما يعادل 5 من 5، وتقييم \"ممتاز\".  \n- معيار استماع الكوتش بفعالية يساوي 4 من 4، ما يعادل 5 من 5، وتقييم \"ممتاز\".  \n- تحسن ملحوظ في البُعد المقاس \"بداية استشعاري لمواهبي الشخصية\" من 2.12 إلى 3.29 (+55 %).  \n- تحسن جوهري بارز في البُعد المقاس \"معرفتي بمفهوم مواطن القوّة\" من 1.62 إلى 3.57 (+120 %).\n\n**التحليل**  \nتشير هذه الأرقام إلى أن المشاركين قد شعروا بالرضا العالي من البرنامج، وأن الكوتش قد أظهر كفاءة عالية في التواصل والاستماع. كما أظهرت النتائج تحسناً ملحوظاً في فهم المشاركين لمواهبهم ومفهوم مواطن القوّة، ما يعكس فاعلية المحتوى المنقح. لا يوجد في السياق أي بيانات تتعلق بالتكلفة أو مقارنة مع مؤشرات أخرى، لذا لا يمكن استنتاج علاقة سببية بين هذه النتائج وتكلفة البرنامج.\n\n**الاقتراحات**  \nبناءً على ارتفاع درجات الرضا والفعالية التي أظهرها الكوتش، يُقترح النظر في تجديد التعاقد مع هذا الكوتش أو الجهة في المستقبل.",
-    "source_chunks": [
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: الاستفادة والمتعة خلال البرنامج | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: تجربة تعليمية إيجابية ومؤثّرة",
-      "Sheet: الأثر - قبل وبعد\nمعيار الكوتشينغ: سهولة التواصل مع الكوتش | المعدّل (1-4): 4 | المعدّل من 5 (معادل): 5 | التقييم: ممتاز ✓",
-      "Sheet: الأثر - قبل وبعد\nمعيار الكوتشينغ: استماع الكوتش بفعالية | المعدّل (1-4): 4 | المعدّل من 5 (معادل): 5 | التقييم: ممتاز ✓",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: بداية استشعاري لمواهبي الشخصيّة | المعدّل قبل الورشة\n(1-4): 2.12 | المعدّل بعد الورشة\n(1-4): 3.29 | الفرق: 1.17 | نسبة التحسّن: +55% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن ملحوظ",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: معرفتي بمفهوم مواطن القوّة | المعدّل قبل الورشة\n(1-4): 1.62 | المعدّل بعد الورشة\n(1-4): 3.57 | الفرق: 1.95 | نسبة التحسّن: +120% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن جوهري بارز"
+    "question": "تكاليف التعاقد مع كوتش خارجي لكل دفعة قد تكون مكلفة على المدى الطويل. كيف تقيم أداء المورد (الكوتش) وهل يمكننا تحويل هذه المعرفة لداخل المنظمة؟",
+    "generated_answer": "**الحقائق:**  \nلا توجد معلومات في السياق المقدم تتضمن أي تفاصيل عن كوتش خارجي، تكاليفه، أو تقييم أدائه، ولا توجد بيانات تشير إلى إمكانية تحويل المعرفة التي يقدّمها إلى داخل المنظمة.\n\n**التحليل:**  \nبما أن السياق لا يحتوي على أي بيانات أو إشارات حول المورد (الكوتش) أو أدائه، لا يمكن استنتاج أو تقييم أي جانب من جوانب التعاقد معه أو نقل المعرفة داخلياً.\n\n**الاقتراحات:**  \nلا يمكن تقديم توصية محددة في هذا الصدد دون وجود معلومات إضافية حول الكوتش، تكاليفه، أو نتائج التدريب.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
     ],
-    "token_precision": 0.35,
-    "token_recall": 0.53,
-    "token_f1": 0.42,
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
     "judge_status": "ok",
-    "groundedness": 4,
-    "numerical_accuracy": 5,
-    "relevance": 4,
-    "clarity": 5,
-    "overall": 4.3,
-    "unsupported_claims": [
-      "suggestion to renew the contract"
-    ],
-    "rationale": "All factual data are traceable to the source chunks, but the recommendation to renew the contract is an inference not directly supported by the provided evidence."
-  },
-  {
-    "question": "\"كيف ينعكس تحسن وعي الموظفين بمواطن قوتهم على الأداء التشغيلي واليومي للشركة؟",
-    "generated_answer": "**الحقائق**  \n- ارتفع متوسط تقييم \"بداية استشعاري لمواهبي الشخصية\" من 2.12 إلى 3.29، أي زيادة قدرها 55 %.  \n- ارتفع متوسط تقييم \"معرفتي بمفهوم مواطن القوّة\" من 1.62 إلى 3.57، أي زيادة قدرها 120 %.  \n- ارتفع متوسط تقييم \"استخدامي الفعلي لمواطن قوّتي\" من 1.75 إلى 3.14، أي زيادة قدرها 80 %.  \n- بلغت نسبة المشاركين الذين حصلوا على درجة 3 أو 4 في مؤشرات القناعة والرضا العام 100 %.  \n- يُذكر أن صاحب العمل يرى \"قيمة منظمية واضحة\" نتيجة لهذه التحسينات.\n\n**التحليل**  \nتشير هذه الأرقام إلى تحسن ملحوظ في وعي الموظفين بمواطن قوتهم وقدرتهم على تطبيقها، كما يعكس رضاهم العالي عن البرنامج. ومع ذلك، لا يتضمن السياق أي بيانات مباشرة تربط هذه التحسينات بأداء تشغيلي أو يومي محدد للشركة، ولا توجد مؤشرات أداء تشغيلية مذكورة في التقرير لتقييم أثر هذه الوعي على الإنتاجية أو الجودة.\n\n**الاقتراحات**  \nبناءً على التحسن الملحوظ في الوعي واستخدام مواطن القوة، يُقترح متابعة مؤشرات الأداء التشغيلية (مثل معدلات الإنتاجية، جودة العمل، أو رضا العملاء) لتحديد ما إذا كان لهذه التحسينات أثر ملموس على الأداء اليومي للشركة.\n\n---\n**Note:** This response reflects our best available answer after multiple review passes, but some figures could not be fully verified against the source documents. Please treat it with appropriate caution.",
-    "source_chunks": [
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: القناعة بأهمية البرنامج لتطوير الفريق | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: قيمة منظمية واضحة",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: بداية استشعاري لمواهبي الشخصيّة | المعدّل قبل الورشة\n(1-4): 2.12 | المعدّل بعد الورشة\n(1-4): 3.29 | الفرق: 1.17 | نسبة التحسّن: +55% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن ملحوظ",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: معرفتي بمفهوم مواطن القوّة | المعدّل قبل الورشة\n(1-4): 1.62 | المعدّل بعد الورشة\n(1-4): 3.57 | الفرق: 1.95 | نسبة التحسّن: +120% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن جوهري بارز",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: الرضا العام عن البرنامج | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: المشاركون رضوا عن القيمة المقدّمة",
-      "Sheet: الأثر - قبل وبعد\nالبُعد المقاس: استخدامي الفعلي لمواطن قوّتي | المعدّل قبل الورشة\n(1-4): 1.75 | المعدّل بعد الورشة\n(1-4): 3.14 | الفرق: 1.39 | نسبة التحسّن: +80% | المقياس (4 درجات): ●●●○ | التفسير: تحسّن كبير في التطبيق"
-    ],
-    "token_precision": 0.26,
-    "token_recall": 0.48,
-    "token_f1": 0.34,
-    "judge_status": "ok",
-    "groundedness": 4,
+    "groundedness": 5,
     "numerical_accuracy": 5,
     "relevance": 5,
     "clarity": 5,
-    "overall": 4.5,
-    "unsupported_claims": [
-      "يُقترح متابعة مؤشرات الأداء التشغيلية (مثل معدلات الإنتاجية، جودة العمل، أو رضا العملاء) لتحديد ما إذا كان لهذه التحسينات أثر ملموس على الأداء اليومي للشركة."
-    ],
-    "rationale": "All quantitative claims are directly traceable to the source chunks, but the recommendation to monitor KPIs is not supported by the provided data, slightly lowering groundedness."
+    "overall": 5.0,
+    "unsupported_claims": [],
+    "rationale": "The answer correctly states that no information is present in the provided source chunks, which is supported by the fact that the chunks are only filenames with no content. All claims are grounded, accurate, relevant, and clear."
   },
   {
-    "question": "هل نوصي بتعميم هذا البرنامج على بقية قطاعات الشركة، أم نكتفي بهذه الدفعة؟",
-    "generated_answer": "**الحقائق**  \n- متوسط الاستفادة والمتعة خلال البرنامج هو 3.57 من 4، مع تقييم نوعي \"مرتفع جداً\" و100 % من المشاركين حصلوا على درجة 3 أو 4.  \n- معيار صدق الكوتش خلال البرنامج هو 3.86 من 4، ما يعادل 4.8 من 5، وتقييم \"جيد جداً\".  \n- القناعة بأهمية البرنامج لتطوير الفريق بلغت 3.57 من 4، مع تقييم نوعي \"مرتفع جداً\" و100 % من المشاركين حصلوا على درجة 3 أو 4.  \n\n**التحليل**  \nتشير هذه الأرقام إلى رضا عالٍ ومشاركة كاملة من المشاركين، بالإضافة إلى ثقة قوية في الكوتش واعتقاد واضح بقيمة البرنامج. لا توجد بيانات في السياق تشير إلى عيوب أو نقص في الفعالية، وبالتالي لا يوجد دليل على وجود عوامل سلبية تمنع التوسع.  \n\n**الاقتراحات**  \nبناءً على ارتفاع درجات الرضا والاعتقاد بقيمة البرنامج، يُقترح توسيع البرنامج إلى بقية قطاعات الشركة مع متابعة مؤشرات الأداء لضمان الفعالية المستمرة.\n\n---\n**Note:** This response reflects our best available answer after multiple review passes, but some figures could not be fully verified against the source documents. Please treat it with appropriate caution.",
-    "source_chunks": [
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: الاستفادة والمتعة خلال البرنامج | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: تجربة تعليمية إيجابية ومؤثّرة",
-      "Sheet: الأثر - قبل وبعد\nمعيار الكوتشينغ: صدق الكوتش خلال البرنامج | المعدّل (1-4): 3.86 | المعدّل من 5 (معادل): 4.8 | التقييم: جيد جداً",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: القناعة بأهمية البرنامج لتطوير الفريق | المعدّل (1-4): 3.57 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: قيمة منظمية واضحة"
+    "question": "revenue vs budget breakdown",
+    "generated_answer": "**Facts**  \n- Budgeted revenue: 1,600,000 SAR.  \n- Actual revenue: 1,435,000 SAR, which is 165,000 SAR below the budgeted target.  \n- Budgeted net profit: +50,000 SAR.  \n- Actual net profit: –79,000 SAR, which is 129,000 SAR lower than the budgeted figure.  \n- Invoice amount total before duplicate review: 53,500 SAR.  \n- Pipeline totals: Closed 20,000 SAR, Negotiation 63,000 SAR, Prospecting 75,000 SAR, Qualified 90,000 SAR.  \n- Duplicate‑invoice anomaly: INV‑501 and INV‑504 are identical (Acme Retail, 12,000 SAR each) and should be verified before counting both as separate revenue.\n\n**Analysis**  \nThe organization achieved 1,435,000 SAR in actual revenue, 165,000 SAR below the 1,600,000 SAR budgeted target. The actual net profit of –79,000 SAR is 129,000 SAR lower than the budgeted +50,000 SAR. The invoice data shows a total of 53,500 SAR, but the duplicate‑invoice anomaly indicates that the true revenue from invoices may be lower once the duplicate is reconciled. Pipeline figures show that the largest portion of potential revenue remains in the Prospecting and Qualified stages, with only 20,000 SAR already closed.\n\n**Suggestions**  \nVerify the duplicate invoice entries and adjust the invoice revenue accordingly, and focus on converting the Prospecting and Qualified pipeline deals to move closer to the revenue target.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
     ],
-    "token_precision": 0.19,
-    "token_recall": 0.46,
-    "token_f1": 0.27,
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
     "judge_status": "ok",
-    "groundedness": 3,
-    "numerical_accuracy": 5,
-    "relevance": 5,
+    "groundedness": 1,
+    "numerical_accuracy": 1,
+    "relevance": 2,
     "clarity": 4,
-    "overall": 3.5,
+    "overall": 1.5,
     "unsupported_claims": [
-      "لا توجد بيانات في السياق تشير إلى عيوب أو نقص في الفعالية، وبالتالي لا يوجد دليل على وجود عوامل سلبية تمنع التوسع.",
-      "بناءً على ارتفاع درجات الرضا والاعتقاد بقيمة البرنامج، يُقترح توسيع البرنامج إلى بقية قطاعات الشركة مع متابعة مؤشرات الأداء لضمان الفعالية المستمرة."
+      "Budgeted revenue: 1,600,000 SAR",
+      "Actual revenue: 1,435,000 SAR",
+      "Budgeted net profit: +50,000 SAR",
+      "Actual net profit: –79,000 SAR",
+      "Invoice amount total before duplicate review: 53,500 SAR",
+      "Pipeline totals: Closed 20,000 SAR, Negotiation 63,000 SAR, Prospecting 75,000 SAR, Qualified 90,000 SAR",
+      "Duplicate‑invoice anomaly: INV‑501 and INV‑504 are identical (Acme Retail, 12,000 SAR each)"
     ],
-    "rationale": "The factual data are accurately reflected from the source chunks, but the inference that there are no negative factors and the recommendation to expand are not directly supported by the retrieved evidence."
+    "rationale": "The answer cites specific financial figures and anomalies that cannot be corroborated by the retrieved source chunks, which only contain file names. Consequently, the response lacks groundedness and numerical accuracy."
+  },
+  {
+    "question": "نسبة توزيع الفواتير المدفوعة وغير المدفوعة",
+    "generated_answer": "نسبة توزيع الفواتير المدفوعة وغير المدفوعة هي كما يلي:\n\n- عدد الفواتير المدفوعة (بما في ذلك الفواتير المدفوعة المتأخرة): 3 فواتير  \n- عدد الفواتير غير المدفوعة: 2 فواتير  \n\nوبالتالي:\n\n- نسبة الفواتير المدفوعة: 60٪  \n- نسبة الفواتير غير المدفوعة: 40٪  \n\nملاحظة: يوجد احتمال لتكرار فواتير INV‑501 و INV‑504، حيث تحملان نفس العميل (Acme Retail) ونفس المبلغ (12,000 SAR). يُنصح بالتحقق من هذه الفواتير قبل احتسابها كفواتير منفصلة.  \n[Source: test_3_revops_data.csv]",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.04,
+    "token_recall": 0.5,
+    "token_f1": 0.07,
+    "judge_status": "ok",
+    "groundedness": 1,
+    "numerical_accuracy": 1,
+    "relevance": 3,
+    "clarity": 4,
+    "overall": 1.5,
+    "unsupported_claims": [
+      "عدد الفواتير المدفوعة (بما في ذلك الفواتير المدفوعة المتأخرة): 3 فواتير",
+      "عدد الفواتير غير المدفوعة: 2 فواتير",
+      "نسبة الفواتير المدفوعة: 60٪",
+      "نسبة الفواتير غير المدفوعة: 40٪",
+      "وجود احتمال لتكرار فواتير INV‑501 و INV‑504، حيث تحملان نفس العميل (Acme Retail) ونفس المبلغ (12,000 SAR)"
+    ],
+    "rationale": "The answer provides specific figures and invoice details that are not present in the provided source chunks, resulting in a lack of groundedness and numerical accuracy. While the response is clear and directly addresses the question, it is unsupported by evidence."
+  },
+  {
+    "question": "نسبة توزيع الفواتير المدفوعة وغير المدفوعة",
+    "generated_answer": "لا توجد معلومات في السياق حول نسبة توزيع الفواتير المدفوعة وغير المدفوعة.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "ok",
+    "groundedness": 5,
+    "numerical_accuracy": 5,
+    "relevance": 5,
+    "clarity": 5,
+    "overall": 5.0,
+    "unsupported_claims": [],
+    "rationale": "The answer accurately reflects the absence of relevant data in the provided source chunk and contains no unsupported statements."
+  },
+  {
+    "question": "تكاليف التعاقد مع كوتش خارجي لكل دفعة قد تكون مكلفة على المدى الطويل. كيف تقيم أداء المورد (الكوتش) وهل يمكننا تحويل هذه المعرفة لداخل المنظمة؟",
+    "generated_answer": "**الحقائق**  \n- سهولة التواصل مع الكوتش: 4 من 4، مع تقييم \"ممتاز\".  \n- استماع الكوتش بفعالية: 4 من 4، مع تقييم \"ممتاز\".  \n- نظرة المساواة واحترام المشارك: 4 من 4، مع تقييم \"ممتاز\".  \n- إيجابية الحوارات، التركيز الكامل، فهم السمات الشخصية، إعجاب المشارك، الثقة، صدق الكوتش، رؤية مميزات المشارك، التشجيع، الوصول إلى نتائج عملية: تتراوح بين 3.43 و3.86 من 4، مع تقييمات \"جيد جداً\" أو \"جيد\".  \n- نسبة الحضور: 100 %.  \n- 86 % من المشاركين صنّفوا المادة \"ممتازة وملائمة للتطوير المهني والشخصي\".  \n- 57 % اكتشفوا جوانب جديدة في شخصيتهم.  \n- 86 % تذكّروا السمات الخمس الأولى بترتيب صحيح.  \n- معدل رضا عام عن البرنامج: 3.57 من 4، مع تقييم \"مرتفع جداً\".  \n- معدل NPS (احتمالية التوصية): 3.43 من 4، مع تقييم \"مرتفع\".  \n- معدل ROI الوقت والجهد: 3.71 من 4، مع تقييم \"مرتفع جداً\".\n\n**التحليل**  \nتُظهر التقييمات العالية في سهولة التواصل، الاستماع، والاحترام مستوى عالٍ من جودة التفاعل مع المشاركين. كما أن جميع المقاييس الأخرى تُظهر أداءً جيداً جداً أو جيداً، ما يعكس قدرة الكوتش على إيصال المحتوى بفعالية وتحفيز المشاركين على تطبيق ما تعلموه. نسبة الحضور الكاملة والرضا العام المرتفع تدعم فكرة أن البرنامج كان مقبولاً ومفيداً للمنظمة. النتائج النوعية (اكتشاف المواهب، تذكّر السمات، ملاءمة المادة) تُظهر تأثيراً ملموساً على الوعي الذاتي والقدرات الشخصية للمشاركين.\n\n**الاقتراحات**  \nبناءً على الأداء القوي للكوتش الخارجي، يُقترح تحويل هذه الخبرة إلى برنامج داخلي تدريبي يركز على تطوير مهارات الكوتشينغ لدى الموظفين، مع الاستفادة من الممارسات التي أثبتت فعاليتها في هذا السياق.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "لدينا تخوف دائم من تسرب الكفاءات (Employee Turnover) بعد الاستثمار في تطويرهم. هل هناك ما يضمن أن هذا الاستثمار عزز ولاء الموظفين ورضاهم عن المنظمة؟",
+    "generated_answer": "",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0.0,
+    "judge_status": "ok",
+    "groundedness": 1,
+    "numerical_accuracy": 1,
+    "relevance": 1,
+    "clarity": 1,
+    "overall": 1.0,
+    "unsupported_claims": [],
+    "rationale": "No answer was provided, so no claims can be evaluated against the source."
+  },
+  {
+    "question": "لدينا تخوف دائم من تسرب الكفاءات (Employee Turnover) بعد الاستثمار في تطويرهم. هل هناك ما يضمن أن هذا الاستثمار عزز ولاء الموظفين ورضاهم عن المنظمة؟",
+    "generated_answer": "**الحقائق**  \n- معدل الرضا العام عن البرنامج هو 3.57 من 4، مع تقييم \"مرتفع جداً\" (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- معدل NPS (احتمالية التوصية للآخرين) هو 3.43 من 4، مع تقييم \"مرتفع\" (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- معدل العائد مقابل الوقت والجهد (ROI) هو 3.71 من 4، مع تقييم \"مرتفع جداً\" (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- نسبة الحضور بلغت 100 %، و100 % من المشاركين أشاروا إلى أن تقييمهم للبرنامج كان 3 أو 4 (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- 86 % من المشاركين صنّفوا المادة \"ممتازة وملائمة للتطوير المهني والشخصي\" (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- 57 % اكتشفوا جوانب جديدة في شخصيتهم (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n- 86 % تذكّروا السمات الخمس الأولى بترتيب صحيح (الملف: impact_report_mawaten_alquwwa.xlsx، ورقة الأثر – قبل وبعد).  \n\n**التحليل**  \nتشير هذه المؤشرات إلى أن المشاركين قد شعروا بقيمة واضحة من البرنامج، وأنهم يقدّرون المحتوى والتجربة التعليمية. وجود نسبة عالية من التوصية (NPS) ورضا عام يعكس احتمالاً أكبر لولاء الموظفين للمنظمة، لكن السياق لا يثبت علاقة سببية مباشرة بين الاستثمار في التدريب وتخفيض معدل تسرب الكفاءات.  \n\n**الاقتراح**  \nبناءً على ارتفاع مؤشرات الرضا والتوصية، يُقترح متابعة معدلات دوران الموظفين خلال الأشهر التالية للبرنامج وإجراء استبيانات متابعة لتقييم مدى استمرار تأثير التدريب على ولاء الموظفين ورضاهم.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.02,
+    "token_recall": 1.0,
+    "token_f1": 0.03,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "هل هذا البرنامج مجرد ورشة عمل ينتهي أثرها بانتهاء اليوم، أم أنه يترك أثراً مستداماً على هيكل الفريق؟",
+    "generated_answer": "**الحقائق**  \n- في ورقة \"الأثر – قبل وبعد\" في ملف impact_report_mawaten_alquwwa.xlsx، كان متوسط معرفة مفهوم مواطن القوّة 1.62 قبل الورشة وارتفع إلى 3.57 بعد الورشة.  \n- استشعار المواهب الشخصية تحسّن من 2.12 إلى 3.29.  \n- الاستخدام الفعلي لمواطن القوّة ارتفع من 1.75 إلى 3.14.  \n- معدل الرضا العام عن البرنامج 3.57/4، مع 100 % من المشاركين يقيّمون البرنامج بـ 3 أو 4.  \n- معدل NPS (احتمالية التوصية) 3.43/4، مع 100 % من المشاركين يقيّمون البرنامج بـ 3 أو 4.  \n- معدل العائد مقابل الوقت والجهد (ROI) 3.71/4، مع 100 % من المشاركين يقيّمون البرنامج بـ 3 أو 4.  \n- نسبة الحضور 100 %.  \n- 86 % من المشاركين صنّفوا المادة \"ممتازة وملائمة للتطوير المهني والشخصي\".  \n- 57 % اكتشفوا جوانب جديدة في شخصيتهم.  \n- 86 % تذكّروا السمات الخمس الأولى بترتيب صحيح.\n\n**التحليل**  \nتشير هذه المؤشرات إلى تحسن واضح في الوعي الذاتي، التطبيق العملي، والرضا العام فور انتهاء الورشة. ومع ذلك، لا يتضمن السياق بيانات متابعة بعد فترة زمنية أطول، ولا توجد مؤشرات تُظهر تأثيراً مستداماً على هيكل الفريق أو سلوكيات العمل على المدى البعيد. لذلك، لا يمكن استنتاج من هذه البيانات أن البرنامج يترك أثرًا دائمًا على هيكل الفريق؛ بل يثبت فقط وجود تأثير إيجابي فوري.\n\n**الاقتراحات**  \nبناءً على عدم وجود بيانات متابعة، يُنصح بإجراء تقييمات دورية لتحديد أثر البرنامج على هيكل الفريق على المدى الطويل.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.01,
+    "token_recall": 1.0,
+    "token_f1": 0.03,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "What is the free cash flow?",
+    "generated_answer": "The free cash flow is not provided in the context.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "breakdown of expenses by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "What is the free cash flow?",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "Summarize the financial highlights",
+    "generated_answer": "**Facts**  \n- Total budgeted expenses: 1,550,000 SAR; actual expenses: 1,514,000 SAR.  \n- Total budgeted revenue: 1,600,000 SAR; actual revenue: 1,435,000 SAR.  \n- Budgeted net profit (from VERIFIED_CALCULATIONS): +50,000 SAR.  \n- Actual net profit (from VERIFIED_CALCULATIONS): –79,000 SAR.  \n\n**Analysis**  \nActual expenses were 36,000 SAR below the budgeted amount. Actual revenue was 165,000 SAR below the budgeted amount. The actual net profit of –79,000 SAR is lower than the projected profit of +50,000 SAR.  \n\n**Suggestions**  \nBased on the revenue shortfall, it would be prudent to review the sales pipeline and pricing strategy to identify opportunities for accelerating deal closures and increasing average deal size. Maintaining the current expense discipline while exploring cost‑effective marketing initiatives could also help improve overall profitability.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "compare deal values across pipeline stages\"",
+    "generated_answer": "**Facts**  \n- Prospecting stage: two deals (DEAL‑201 = 50,000 SAR, DEAL‑206 = 25,000 SAR) totaling 75,000 SAR.  \n- Qualified stage: two deals (DEAL‑202 = 30,000 SAR, DEAL‑205 = 60,000 SAR) totaling 90,000 SAR.  \n- Negotiation stage: two deals (DEAL‑203 = 45,000 SAR, DEAL‑207 = 18,000 SAR) totaling 63,000 SAR.  \n- Closed stage: one deal (DEAL‑204 = 20,000 SAR).  \n\n**Analysis**  \nThe Qualified stage has the largest aggregate deal value at 90,000 SAR, followed by Prospecting at 75,000 SAR, Negotiation at 63,000 SAR, and Closed at 20,000 SAR.  \n\n**Suggestion**  \nBased on the larger aggregate value in the Qualified stage, it would be beneficial to allocate additional resources to accelerate the movement of Prospecting deals into Qualification, thereby increasing the overall pipeline value.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "قارن قيم الصفقات حسب المرحلة",
+    "generated_answer": "",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0.0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "قارن قيم الصفقات حسب المرحلة",
+    "generated_answer": "**الحقائق**  \n- مجموع قيمة الصفقات في مرحلة \"المقترح\" (Prospecting) هو 75,000 SAR.  \n- مجموع قيمة الصفقات في مرحلة \"المؤهل\" (Qualified) هو 90,000 SAR.  \n- مجموع قيمة الصفقات في مرحلة \"المفاوضة\" (Negotiation) هو 63,000 SAR.  \n- مجموع قيمة الصفقات في مرحلة \"المغلقة\" (Closed) هو 20,000 SAR.  \n\nلا توجد أي صفقات مكررة في البيانات؛ كل صفقة تظهر مرة واحدة فقط مع مرحلة محددة، وبالتالي لا يوجد تعارض بين المراحل.  \n\n**التحليل**  \nأعلى قيمة إجمالية للصفقات توجد في مرحلة \"المؤهل\"، تليها مرحلة \"المقترح\"، ثم \"المفاوضة\"، وأخيراً \"المغلقة\" التي تحمل أقل قيمة. هذا الترتيب يوضح أن قيمة الصفقات تتراكم أكثر في المراحل المبكرة قبل إغلاق الصفقات.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "نسبة توزيع الفواتير المدفوعة وغير المدفوعة",
+    "generated_answer": "**الحقائق**  \nمن بين 5 فواتير مسجلة، 3 فواتير مدفوعة (60٪) و2 فواتير غير مدفوعة (40٪).  \nملاحظة: توجد فواتير مكررة (INV‑501 و INV‑504) لنفس العميل والمبلغ، ويجب التحقق منها قبل احتسابها كفواتير منفصلة.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "show pipeline value by deal",
+    "generated_answer": "**Facts**  \nThe pipeline consists of the following deals and their values:  \n- DEAL‑201 (Zenith Corp) – 50,000 SAR, Prospecting  \n- DEAL‑202 (Orbit Inc) – 30,000 SAR, Qualified  \n- DEAL‑203 (Vantage Ltd) – 45,000 SAR, Negotiation  \n- DEAL‑204 (Crescent Co) – 20,000 SAR, Closed  \n- DEAL‑205 (Falcon Group) – 60,000 SAR, Qualified  \n- DEAL‑206 (NovaTech) – 25,000 SAR, Prospecting  \n- DEAL‑207 (Delta Logistics) – 18,000 SAR, Negotiation",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "revenue vs budget breakdown",
+    "generated_answer": "**Facts**  \n- Budgeted revenue: 1,600,000 SAR.  \n- Actual revenue: 1,435,000 SAR, which is 165,000 SAR less than the budgeted amount.  \n- Invoice amount total before duplicate review: 53,500 SAR.  \n- Duplicate invoice note: INV‑501 and INV‑504 are both for Acme Retail and each amount to 12,000 SAR.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "show revenue trend by category",
+    "generated_answer": "**Facts**  \n- In the budget‑actuals sheet, the actual revenue for the SaaS category is 980,000 SAR against a budget of 1,200,000 SAR, while the Services category generated 455,000 SAR against a budget of 400,000 SAR. [Source: test_2_budget_actuals.xlsx]  \n- The invoice data records paid invoices of 12,000 SAR (INV‑501), 15,000 SAR (INV‑503), and 12,000 SAR (INV‑504). [Source: test_3_revops_data.csv]  \n- A potential duplicate exists: INV‑501 and INV‑504 are both for Acme Retail and each amount to 12,000 SAR; this should be verified before counting both as separate revenue.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.07,
+    "token_recall": 1.0,
+    "token_f1": 0.12,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "Summarize the financial highlights",
+    "generated_answer": "**Facts**  \n- Total budgeted expenses: 1,550,000 SAR.  \n- Total actual expenses: 1,514,000 SAR.  \n- Total budgeted revenue: 1,600,000 SAR.  \n- Total actual revenue: 1,435,000 SAR.  \n- Budgeted net profit: +50,000 SAR.  \n- Actual net profit: –79,000 SAR.  \n(These figures are taken from the VERIFIED_CALCULATIONS block.)\n\n**Analysis**  \nActual expenses were 36,000 SAR below the budgeted amount, while actual revenue fell short of the budget by 165,000 SAR. The combination of these variances resulted in an actual net profit of –79,000 SAR, compared with a budgeted profit of +50,000 SAR.  \n\n**Suggestions**  \nBased on the revenue shortfall, it would be prudent to prioritize initiatives that accelerate sales pipeline conversion and explore pricing adjustments for key services. Additionally, reviewing the marketing spend that was reduced could help determine whether a targeted campaign could recover some of the lost revenue.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "show revenue trend by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "الاتجاه خلال الأشهر الماضية للمصروفات",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "show revenue trend by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "show revenue trend by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "breakdown of expenses by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "breakdown of expenses by category",
+    "generated_answer": "We were unable to generate a response at this time. Please try again shortly.",
+    "retrieved_context": [
+      "test_2_budget_actuals.xlsx",
+      "test_3_revops_data.csv"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "Summarize the financial highlights",
+    "generated_answer": "The provided context does not include any financial information or highlights.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
   },
   {
     "question": "أرى بنداً يخص العائد مقابل الوقت والجهد المستثمر (ROI) بتقييم 3.71 من 4 (مرتفع جداً). كيف يُترجم هذا التقييم إلى قيمة فعلية للشركة؟",
-    "generated_answer": "**الحقائق**  \n- معدل تقييم العائد مقابل الوقت والجهد المستثمر (ROI) هو 3.71 من 4، مع تقييم نوعي \"مرتفع جداً\".  \n- 100 % من المشاركين حصلوا على درجة 3 أو 4 في هذا المؤشر.  \n- صاحب العمل يصف الاستثمار بأنه \"مجدٍ\" وفقاً لتقدير المشاركين.\n\n**التحليل**  \nتشير هذه الأرقام إلى أن جميع المشاركين يرون أن الوقت والجهد المبذول في البرنامج يحقق قيمة كبيرة، وأنهم يقدّرون العائد على استثمارهم. ومع ذلك، لا يتضمن السياق أي بيانات مالية أو تقدير مباشر للتكلفة أو الفائدة، وبالتالي لا يمكن تحويل هذا التقييم إلى قيمة رقمية محددة للشركة دون مزيد من المعلومات حول التكاليف والنتائج الكمية.\n\n**الاقتراحات**  \nلتحويل هذا التقييم إلى قيمة فعلية، يُقترح حساب تكلفة البرنامج ومقارنة هذه التكلفة مع الفوائد الكمية المحتملة (مثل زيادة الإنتاجية، تقليل دوران الموظفين، أو تحسين جودة العمل) لتحديد العائد المالي الحقيقي.",
-    "source_chunks": [
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: العائد مقابل الوقت والجهد المستثمر (ROI) | المعدّل (1-4): 3.71 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: استثمار مُجدٍ بنظر المشاركين",
-      "Sheet: الأثر - قبل وبعد\nالمؤشر: العائد مقابل الوقت والجهد المستثمر (ROI) | المعدّل (1-4): 3.71 | التقييم النوعي: مرتفع جداً | % من المشاركين عند 3 أو 4: 100% | الدلالة لصاحب العمل: استثمار مُجدٍ بنظر المشاركين"
+    "generated_answer": "**الحقائق**  \nالمؤشر \"العائد مقابل الوقت والجهد المستثمر (ROI)\" حصل على متوسط 3.71 من 4، مع تقييم \"مرتفع جداً\" من قبل جميع المشاركين (100٪). يُشار في التقرير إلى أن المشاركين يرون أن الاستثمار في البرنامج \"مجدٍ\" من وجهة نظرهم.\n\n**التحليل**  \nهذا التقييم يعكس إدراك المشاركين بأن الفائدة التي حصلوا عليها من البرنامج تفوق الوقت والجهد المبذولين، لكنه لا يحدد قيمة مالية محددة للشركة. لا توجد بيانات في التقرير تربط هذا المتوسط بمقدار نقدي أو بمؤشرات مالية أخرى، وبالتالي لا يمكن تحويله مباشرة إلى قيمة فعلية للشركة دون مزيد من المعلومات.\n\n**الاقتراحات**  \nبناءً على هذا التقييم، يُنصح بإجراء تحليل تكلفة‑فائدة يضم جمع بيانات حول الوقت المنقضي في التدريب، والزيادة المتوقعة في الإنتاجية أو جودة العمل، ثم تحويل هذه الفوائد إلى قيمة مالية لتحديد العائد الحقيقي على الاستثمار.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
     ],
-    "token_precision": 0.17,
-    "token_recall": 0.52,
-    "token_f1": 0.26,
-    "judge_status": "ok",
-    "groundedness": 5,
-    "numerical_accuracy": 5,
-    "relevance": 5,
-    "clarity": 5,
-    "overall": 5.0,
-    "unsupported_claims": [],
-    "rationale": "The answer accurately reflects all information in the source chunks, does not add any unverified figures or statements, and directly addresses the user’s question with clear, relevant guidance."
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "غالباً ما نعاني في البرامج التدريبية من ضعف حضور الموظفين وهدر الميزانيات المخصصة لها. ما هي نسبة الالتزام الفعلي في هذا البرنامج؟",
+    "generated_answer": "",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0.0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "غالباً ما نعاني في البرامج التدريبية من ضعف حضور الموظفين وهدر الميزانيات المخصصة لها. ما هي نسبة الالتزام الفعلي في هذا البرنامج؟",
+    "generated_answer": "نسبة الالتزام الفعلي في البرنامج هي 100%، وفقاً للبيانات الموجودة في قسم \"نسبة الحضور\" في جدول الأثر.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "تقييم الكوتش مرتفع جداً ويصل إلى 5/5 في بعض البنود. هل القيمة المقدمة تستحق استمرار التعاقد مع هذا الكوتش/الجهة مستقبلاً؟",
+    "generated_answer": "**الحقائق**  \n- تقييم الكوتش في معظم البنود هو 4/4 معادل 5/5، مع تقييم \"ممتاز\" في سهولة التواصل، الاستماع، ونظرة المساواة.  \n- تقييمات الإيجابية الأخرى (إيجابية الحوارات، التركيز، فهم السمات، الإعجاب، الثقة، صدق الكوتش، رؤية المميزات، التشجيع، الوصول إلى نتائج) تتراوح بين 3.86/4 (معادل 4.8/5) و3.57/4 (معادل 4.5/5).  \n- متوسط تقييم الأداء الكلي للكوتش هو 3.86/4 معادل 4.8/5.  \n- رضا المشاركين عن البرنامج: 3.57/4 مرتفع جداً، مع 100% من المشاركين يقيّمون البرنامج بمراتب 3 أو 4.  \n- مؤشر NPS (احتمالية التوصية) هو 3.43/4 مرتفع.  \n- مؤشر العائد مقابل الوقت والجهد (ROI) هو 3.71/4 مرتفع جداً، مع 100% من المشاركين يقرّون بأن الاستثمار \"مجدٍ\".  \n- نسبة الحضور 100%، أي حضور كامل أو أكثر من 90% لجميع المشاركين.  \n\n**التحليل**  \nتشير هذه الأرقام إلى أن المشاركين يقدّرون جودة الكوتش والبرنامج بشكل كبير، مع تحسّن واضح في الوعي الذاتي وتطبيق مواطن القوة. كما أن التقييمات العالية للرضا والـ ROI تعكس إدراك المشاركين بأن الفائدة التي حصلوا عليها تفوق الوقت والجهد المبذولين. لا توجد بيانات مالية مباشرة تربط هذه التقييمات بمبلغ نقدي أو عائد مالي محدد للشركة، لكن المؤشرات تشير إلى قيمة ملموسة في تحسين الأداء والرضا التنظيمي.  \n\n**الاقتراحات**  \nاستمرار التعاقد مع الكوتش مع مراجعة دورية لتكاليف البرنامج مقابل الفائدة المتوقعة، مع التركيز على الحفاظ على نسبة الحضور العالية وتقييم رضا المشاركين في كل دورة.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "كيف ينعكس تحسن وعي الموظفين بمواطن قوتهم على الأداء التشغيلي واليومي للشركة؟",
+    "generated_answer": "**الحقائق**  \n- تحسّن معرفتي بمفهوم مواطن القوّة من 1.62 إلى 3.57، أي زيادة قدرها 120 %.  \n- تحسّن استشعاري لمواهبي الشخصية من 2.12 إلى 3.29، أي زيادة قدرها 55 %.  \n- تحسّن استخدامي الفعلي لمواطن قوتي من 1.75 إلى 3.14، أي زيادة قدرها 80 %.  \n- نسبة الحضور 100 %، مع تقييم المادة بأنها \"ممتازة وملائمة\" لدى 86 % من المشاركين.  \n- 57 % من المشاركين اكتشفوا جوانب جديدة في شخصيتهم، و86 % يتذكرون السمات الخمس الأولى بترتيبها.  \n- مؤشر العائد مقابل الوقت والجهد (ROI) هو 3.71 من 4، مع 100 % من المشاركين يقرّون بأن الاستثمار \"مجدٍ\".  \n\n**التحليل**  \nتشير هذه الأرقام إلى تحوّل واضح في الوعي الذاتي وتطبيق مواطن القوة على أرض الواقع.  يُذكر في التقرير أن \"توسيع الوعي الذاتي يعزز القرارات المهنية\" وأن \"ملاءمة المادة للحياة المهنية\" تؤثر مباشرة على الأداء الوظيفي.  كما أن ارتفاع نسبة الحضور والرضا العام يوضح التزاماً تنظيميًا عاليًا، ما قد يساهم في تحسين جودة العمل اليومي.  لا يُثبت التقرير علاقة سببية مباشرة بين هذه التحسينات وأداء محدد، لكنه يُظهر مؤشرات تدعم فكرة أن الموظفين الذين يملكون وعيًا أكبر بمواطن قوتهم قد يحققون أداءً أكثر فاعلية وتنسيقًا في بيئة العمل.  \n\n**الاقتراحات**  \nاستمرار برامج تطوير الوعي الذاتي مع رصد مؤشرات الأداء اليومي (مثل معدلات الإنجاز، جودة العمل، ورضا العملاء) لتقييم مدى تأثير هذه التحسينات على النتائج التشغيلية، مع التركيز على تعزيز تطبيق مواطن القوة في مهام العمل اليومية.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "What is the gearing ratio?",
+    "generated_answer": "The context provided does not contain any information about the company's gearing ratio.",
+    "retrieved_context": [
+      "test_1_bank_statement.xlsx",
+      "test_1_ledger.csv",
+      "test_1_ledger.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "Summarize the financial highlights",
+    "generated_answer": "The provided context does not include any financial information or highlights.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "التدريب النظري جيد، ولكن كيف ينعكس هذا البرنامج على سلوك الموظفين وإنتاجيتهم الفعلية في العمل؟",
+    "generated_answer": "**الحقائق**  \n- قبل الورشة، كان متوسط معرفتي بمفهوم مواطن القوّة 1.62، وبعد الورشة ارتفع إلى 3.57 (زيادة 1.95، أي +120 %).  \n- متوسط بداية استشعاري لمواهبي الشخصية كان 2.12 قبل الورشة و3.29 بعد الورشة (زيادة 1.17، أي +55 %).  \n- متوسط استخدامي الفعلي لمواطن قوّتي كان 1.75 قبل الورشة و3.14 بعد الورشة (زيادة 1.39، أي +80 %).  \n- رضا المشاركين عن البرنامج بلغ 3.57 على مقياس 1‑4، مع 100 % من المشاركين يضعون 3 أو 4.  \n- مؤشر العائد مقابل الوقت والجهد (ROI) بلغ 3.71، مع 100 % من المشاركين يضعون 3 أو 4.  \n- نسبة الحضور بلغت 100 %، و86 % من المشاركين صنّفوا المادة \"ممتازة وملائمة للتطوير المهني والشخصي\".  \n- 57 % من المشاركين اكتشفوا جوانب جديدة في شخصيتهم، و86 % تذكّروا السمات الخمس الأولى بالكامل.\n\n**التحليل**  \nتشير التحسينات الكبيرة في مؤشرات الوعي الذاتي واستخدام مواطن القوّة إلى تحوّل إيجابي في فهم المشاركين لقدراتهم الشخصية. كما أن مستويات الرضا العالية والعائد المرتفع تعكس تقدير المشاركين للقيمة التي يضيفها البرنامج. ومع ذلك، لا يتضمن التقرير أي بيانات مباشرة عن سلوك الموظفين في بيئة العمل أو مؤشرات إنتاجية مثل الإنجاز أو الكفاءة أو جودة العمل. لذلك لا يمكن استنتاج علاقة سببية أو تأثّر مباشر على الإنتاجية الفعلية استناداً إلى هذه البيانات وحدها.\n\n**الاقتراحات**  \nبناءً على ارتفاع مستويات الوعي الذاتي والرضا، يُقترح متابعة أداء الموظفين عبر مؤشرات إنتاجية محددة بعد انتهاء البرنامج، مع تشجيع المدراء على دمج نتائج تقييم مواطن القوّة في مراجعات الأداء وتخصيص المهام وفقاً لنقاط القوة المكتشفة.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
+  },
+  {
+    "question": "تقييم الكوتش مرتفع جداً ويصل إلى 5/5 في بعض البنود. هل القيمة المقدمة تستحق استمرار التعاقد مع هذا الكوتش/الجهة مستقبلاً؟",
+    "generated_answer": "**الحقائق**  \n- في قسم جودة الكوتشينغ، حصل الكوتش على متوسط تقييم 4/4 في سهولة التواصل، الاستماع، والاحترام، مع معادل 5/5 في هذه البنود.  \n- تقييمات أخرى للكوچينغ جاءت بـ3.86/4 (معادل 4.8/5) في مجالات مثل إيجابية الحوارات، التركيز، وفهم السمات الشخصية، مع 100 % من المشاركين يضعون 3 أو 4.  \n- نسبة الحضور 100 %، و86 % من المشاركين صنّفوا المادة \"ممتازة وملائمة للتطوير المهني والشخصي\".  \n- رضا المشاركين عن البرنامج بلغ 3.57/4 (مرتفع جداً) مع 100 % من المشاركين يضعون 3 أو 4.  \n- مؤشر العائد مقابل الوقت والجهد (ROI) بلغ 3.71/4 (مرتفع جداً) مع 100 % من المشاركين يضعون 3 أو 4.\n\n**التحليل**  \nتشير هذه الأرقام إلى أن الكوتش يحقق مستوى عالٍ من رضا المشاركين وتقديرهم للبرنامج، مع تقييمات ممتازة في التواصل والاستماع والاحترام. كما أن نسبة الحضور والتصنيف الإيجابي للمادة تدعم فكرة أن البرنامج يُعتبر ذا قيمة مضافة للموظفين. ومع ذلك، لا يتضمن التقرير بيانات مباشرة عن تأثير البرنامج على سلوك الموظفين أو مؤشرات إنتاجية في بيئة العمل، وبالتالي لا يمكن استنتاج علاقة سببية بين جودة الكوتش والنتائج التشغيلية.\n\n**الاقتراحات**  \nبناءً على ارتفاع مستويات الرضا والتقييمات الإيجابية، يُقترح الاستمرار في التعاقد مع هذا الكوتش مع وضع آلية متابعة لأداء الموظفين عبر مؤشرات إنتاجية محددة بعد انتهاء البرنامج، لضمان استدامة الفائدة الملموسة للجهة.",
+    "retrieved_context": [
+      "impact_report_mawaten_alquwwa.xlsx"
+    ],
+    "token_precision": 0.0,
+    "token_recall": 0.0,
+    "token_f1": 0,
+    "judge_status": "judge_failed",
+    "judge_raw_response": null
   }
 ]

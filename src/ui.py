@@ -12,6 +12,7 @@ import time
 import sys
 import plotly.graph_objects as go
 import json
+import re
 import pandas as pd
 import chat_db
 
@@ -54,9 +55,29 @@ def _toggle_lang():
     new = "ar" if st.session_state.lang == "en" else "en"
     set_lang(st, new)
 
+_LEGACY_ANSWER_NOTE_PATTERNS = (
+    re.compile(
+        r"\n*\s*---\s*\n\s*\*\*Note:\*\*\s*.*?appropriate caution\.?",
+        re.IGNORECASE | re.DOTALL,
+    ),
+    re.compile(
+        r"\n*\s*---\s*\n\s*\*\*ملاحظة:\*\*\s*.*?الحذر المناسب\.?",
+        re.DOTALL,
+    ),
+)
+
+def strip_legacy_answer_note(answer):
+    cleaned = answer or ""
+    for pattern in _LEGACY_ANSWER_NOTE_PATTERNS:
+        cleaned = pattern.sub("", cleaned)
+    return cleaned.strip()
+
 def build_llm_chat_history(chat_history, max_turns: int = 6):
     recent = chat_history[-max_turns:] if max_turns else chat_history
-    return [{"question": turn.get("question", ""), "answer": turn.get("answer", "")} for turn in recent]
+    return [
+        {"question": turn.get("question", ""), "answer": strip_legacy_answer_note(turn.get("answer", ""))}
+        for turn in recent
+    ]
 
 def process_uploaded_files(uploaded_files):
     if os.path.exists("./data/uploaded/"): shutil.rmtree("./data/uploaded")
@@ -93,15 +114,24 @@ def clear_chat_only():
     st.session_state.chat_history = []; chat_db.clear_session(session_id)
 
 def render_chat_turn(chat, idx):
-    answer = chat.get("answer", "")
-    st.markdown(answer)
+    answer = strip_legacy_answer_note(chat.get("answer", ""))
+    _ar = len(re.findall(r"[\u0600-\u06FF]", answer))
+    _lt = len(re.findall(r"[A-Za-z]", answer))
+    if _ar and _ar >= _lt:
+        # إجابة عربية: اعرضها من اليمين لليسار مع الحفاظ على تنسيق الماركداون
+        st.markdown(
+            f'<div dir="rtl" style="text-align: right;">\n\n{answer}\n\n</div>',
+            unsafe_allow_html=True,
+        )
+    else:
+        st.markdown(answer)
     chart_data = chat.get("chart")
     if chart_data and chart_data.get("success"):
         chart_json = chart_data.get("chart")
         if chart_json:
             try:
                 fig = go.Figure(json.loads(chart_json))
-                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(15,29,50,0.6)", font_color="#E2E8F0", font_family="IBM Plex Mono, monospace", title_font_color="#60A5FA", legend_font_color="#94A3B8", margin=dict(l=20, r=20, t=40, b=20))
+                fig.update_layout(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(15,29,50,0.6)", font_color="#E2E8F0", font_family="IBM Plex Mono, monospace", title_font_color="#60A5FA", legend_font_color="#94A3B8", margin=dict(l=20, r=20, t=20, b=20), title_text="")
                 st.plotly_chart(fig, use_container_width=True, key=f"chart_{idx}")
             except Exception as e: st.error(t("chart_error", error=str(e)))
         if st.session_state.get("show_data_table", True) and chart_data.get("data_preview"):
@@ -174,16 +204,28 @@ def render_chat_turn(chat, idx):
 
     if chat.get("verification"):
         with st.expander(t("view_verification")):
-            st.write(chat["verification"].get("notes", "No verification notes available."))
+            _notes = chat["verification"].get("notes", t("no_verification_notes"))
+            if get_lang(st) == "ar":
+                _dir, _align = "rtl", "right"
+            else:
+                _dir, _align = "ltr", "left"
+            st.markdown(
+                f'<div style="direction: {_dir}; text-align: {_align};">{_notes}</div>',
+                unsafe_allow_html=True,
+            )
 
 def handle_question(question: str):
     if st.session_state.agent is None: return st.warning(t("upload_first_warning"))
     with st.spinner(t("thinking")):
         result = st.session_state.agent.process_query(question, chat_history=build_llm_chat_history(st.session_state.chat_history))
+    answer = strip_legacy_answer_note(result.get("answer"))
     entry = {
-        "question": question, "answer": result.get("answer"), "chart": result.get("chart"),
+        "question": question, "answer": answer, "chart": result.get("chart"),
         "source_pages": result.get("source_pages"), "confidence": result.get("confidence"),
         "relevant_docs_count": result.get("relevant_docs_count"), "verification": result.get("verification"),
+        "retrieved": answer,
+        "relevant": result.get("source_texts"),
+        "source_texts": result.get("source_texts"),
     }
     st.session_state.chat_history.append(entry)
     chat_db.save_entry(session_id, entry)
@@ -225,7 +267,7 @@ def show_welcome():
                     with st.spinner(t("processing")):
                         try:
                             process_uploaded_files(uploaded)
-                            st.success(t("process_success", files=st.session_state.num_files, docs=st.session_state.num_docs, time=st.session_state.proc_time))
+                            st.success(t("process_success", files=st.session_state.num_files, docs=st.session_state.num_files, time=st.session_state.proc_time))
                         except Exception as e:
                             st.error(t("process_error", error=str(e)))
                             st.stop()
@@ -288,7 +330,6 @@ def show_dashboard_header():
     st.divider()
 
 def show_dashboard():
-    show_dashboard_header()
     for i, chat in enumerate(st.session_state.chat_history):
         st.html('<span class="msg-user-anchor"></span>')
         with st.chat_message("user", avatar="./images/user_icon.png"): st.write(chat.get("question"))

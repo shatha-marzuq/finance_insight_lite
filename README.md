@@ -168,7 +168,7 @@ Image and embedded-image extraction uses OCR-related libraries from the processi
    The agent calls Groq-hosted chat models through LangChain, generates a finance-oriented answer, and returns source pages, confidence, verification metadata, and optional chart data.
 
 6. **Visualization**
-   Chart requests are detected from the query. The app extracts tabular/numeric data and renders Plotly bar, line, pie, scatter, or area charts.
+   Chart requests are detected from the query. The app extracts tabular/numeric data and renders Plotly bar, line, pie, or area charts.
 
 ## Configuration
 

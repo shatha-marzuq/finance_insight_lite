@@ -46,7 +46,7 @@ def create_groq_chat_model(
     # require the optional LangChain/Groq runtime to be installed.
     from langchain_groq import ChatGroq
 
-    return ChatGroq(model=model, api_key=SecretStr(api_key), temperature=temperature)
+    return ChatGroq(model=model, api_key=SecretStr(api_key),max_tokens=1024, temperature=temperature)
 
 
 class GroqJudgeClient:

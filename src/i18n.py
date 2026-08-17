@@ -218,6 +218,10 @@ TRANSLATIONS = {
         "en": "View Verification",
         "ar": "عرض التحقق",
     },
+    "no_verification_notes": {
+        "en": "No verification notes available.",
+        "ar": "لا توجد ملاحظات تحقق متاحة.",
+    },
     "chart_error": {
         "en": "Error rendering chart: {error}",
         "ar": "خطأ في عرض الرسم البياني: {error}",

@@ -57,6 +57,7 @@ def render_full_table_document(path: str) -> Document:
         page_content="\n\n".join(rendered_parts),
         metadata={
             "source": source_name,
+            "source_file": source_name,
             "source_path": str(path),
             "table_full_context": True,
             "total_rows": total_rows,

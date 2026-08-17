@@ -702,12 +702,19 @@ def load_documents_fastest(file_path, use_cache=True, max_workers=1, **kwargs):
 
     else:
         raise ValueError(f"Unsupported file type: {file_extension}")
+
+    source_name = os.path.basename(file_path)
+    for doc in docs:
+        metadata = doc.metadata or {}
+        metadata.setdefault("source", source_name)
+        metadata.setdefault("source_file", metadata.get("source", source_name))
+        doc.metadata = metadata
     
     return {
         'documents': docs,
         'relevant_docs_count': len(docs),
         'file_type': file_type,
-        'source': os.path.basename(file_path)
+        'source': source_name
     }
 
 

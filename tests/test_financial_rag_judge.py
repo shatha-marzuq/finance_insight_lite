@@ -37,7 +37,7 @@ JUDGE_METRICS = ("groundedness", "numerical_accuracy", "relevance", "clarity", "
 # Aggregation assertions require stable, labeled model records. The chat-history
 # export intentionally has no model labels, so it cannot exercise per-model
 # aggregation behavior.
-FIXTURE_PATH = Path(__file__).parent / "fixtures" / "financial_rag_samples.jsonl"
+FIXTURE_PATH = Path(__file__).parent / "fixtures" / "test_chart_generation.jsonl"
 
 
 class FakeJudgeClient:

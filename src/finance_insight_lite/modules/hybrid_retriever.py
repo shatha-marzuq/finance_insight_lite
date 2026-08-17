@@ -25,8 +25,34 @@ def _tokenize(text: str) -> List[str]:
     (stemmer) عربي مخصص مثل ISRIStemmer أو camel-tools لتحسين إضافي.
     """
     text = re.sub(r'[\u064B-\u065F\u0670]', '', text)  # إزالة التشكيل
+    text = text.translate(str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789"))
+    text = re.sub(r'\b(\d[\d,]*(?:\.\d+)?)\s*(million|mn|m)\b', _million_token, text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(\d[\d,]*(?:\.\d+)?)\s*(billion|bn|b)\b', _billion_token, text, flags=re.IGNORECASE)
+    text = re.sub(r'\b(\d[\d,]*(?:\.\d+)?)\s*(thousand|k)\b', _thousand_token, text, flags=re.IGNORECASE)
     text = re.sub(r'[^\w\s]', ' ', text, flags=re.UNICODE)
-    return text.lower().split()
+    tokens = text.lower().split()
+    expanded_tokens = list(tokens)
+    for token in tokens:
+        if re.fullmatch(r'\d[\d,]*(?:\.\d+)?', token):
+            expanded_tokens.append(token.replace(",", ""))
+    return expanded_tokens
+
+
+def _scaled_number_token(match, factor: int) -> str:
+    value = float(match.group(1).replace(",", "")) * factor
+    return f" {int(value) if value.is_integer() else value:g} "
+
+
+def _million_token(match) -> str:
+    return _scaled_number_token(match, 1_000_000)
+
+
+def _billion_token(match) -> str:
+    return _scaled_number_token(match, 1_000_000_000)
+
+
+def _thousand_token(match) -> str:
+    return _scaled_number_token(match, 1_000)
 
 
 class HybridRetriever:
